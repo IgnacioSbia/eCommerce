@@ -1,0 +1,16 @@
+.mainPageProducts{
+    display: flex;
+    justify-content: space-around;
+}
+.mainPageSideProductsShow{
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+}
+.mainPageAllProducts{
+    display: flex;
+    justify-content: space-around;
+}
+.mainPageMainProductsShow{
+    text-align: center;
+}
