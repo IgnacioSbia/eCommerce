@@ -12,5 +12,31 @@
     justify-content: space-around;
 }
 .mainPageMainProductsShow{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.mainPageCardProduct{
+    margin: 5%;
+    border: none;
+    
+}
+.mainPageCardProduct:hover{
+    border: 1px solid black;
+}
+
+.mainPageMainProductPreview{
+    width: 48px;
+}
+.mainPageBuyProductButton{
+    background-color: black ; 
+    border-color: white;
+}
+.mainPageBuyProductButton:hover{
+    background-color: rgb(255, 255, 255) ; 
+    border-color: rgb(0, 0, 0);
+    color: black;
+}
+.mainPageSideProducts{
+    background: gray;
 }

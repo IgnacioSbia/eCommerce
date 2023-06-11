@@ -1,6 +1,9 @@
 import { Row, Col } from "react-bootstrap";
 import NavBar from "../NavBar/NavBar";
 import './MainPage.css';
+import cartMrkt from '../NavBar/NavImgs/carr.png';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 function MainPage() {
   return (
@@ -8,33 +11,213 @@ function MainPage() {
     <header>
         <NavBar/>
     </header>
-    <body className="container-sm">
+    <body className="">
        <Row>
-        
            <Col xs sm="10">
-                <Col sm="10" className="mainPageProducts">
-                    <aside className="mainPageAdvertismentProducts">
-                        <p>You may be interested in</p>
-                    </aside>
+                <Col sm="8" className="mainPageProducts">
                     <h1>Products</h1>
                 </Col>
                 <Col sm="10" className="mainPageAllProducts">
-                    <Col sm="4" className="mainPageSideProductsShow">
-                        <h1>Hellooooo</h1>
-                        <h1>Hellooooo</h1>
-                        <h1>Hellooooo</h1>
-                        <h1>Hellooooo</h1>
-                        <h1>Hellooooo</h1>
-
-                        
+                    
+                    <Col sm="12" className="mainPageMainProductsShow">
+                        <Card style={{ width: '10rem' }} className="mainPageCardProduct">
+                            <Card.Img variant="top" src={cartMrkt} />
+                            <Card.Body>
+                                    <Card.Title>Product</Card.Title>
+                                    <Card.Text>
+                                        Product Description
+                                    </Card.Text>
+                                    <Card.Text>
+                                        $Price
+                                    </Card.Text>
+                                    <Button variant="primary" className="mainPageBuyProductButton">Buy</Button>
+                             </Card.Body>
+                        </Card>
+                        <Card style={{ width: '10rem' }} className="mainPageCardProduct">
+                            <Card.Img variant="top" src={cartMrkt} />
+                            <Card.Body>
+                                     <Card.Title>Product</Card.Title>
+                                    <Card.Text>
+                                        Product Description
+                                    </Card.Text>
+                                    <Card.Text>
+                                        $Price
+                                    </Card.Text>
+                                    <Button variant="primary" className="mainPageBuyProductButton">Buy</Button>
+                            </Card.Body>
+                        </Card>
+                        <Card style={{ width: '10rem' }} className="mainPageCardProduct">
+                            <Card.Img variant="top" src={cartMrkt} />
+                            <Card.Body>
+                                     <Card.Title>Product</Card.Title>
+                                    <Card.Text>
+                                        Product Description
+                                    </Card.Text>
+                                    <Card.Text>
+                                        $Price
+                                    </Card.Text>
+                                    <Button variant="primary" className="mainPageBuyProductButton">Buy</Button>
+                            </Card.Body>
+                        </Card>
+                        <Card style={{ width: '10rem' }} className="mainPageCardProduct">
+                            <Card.Img variant="top" src={cartMrkt} />
+                            <Card.Body>
+                                     <Card.Title>Product</Card.Title>
+                                    <Card.Text>
+                                        Product Description
+                                    </Card.Text>
+                                    <Card.Text>
+                                        $Price
+                                    </Card.Text>
+                                    <Button variant="primary" className="mainPageBuyProductButton">Buy</Button>
+                            </Card.Body>
+                        </Card>
+                        <Card style={{ width: '10rem' }} className="mainPageCardProduct">
+                            <Card.Img variant="top" src={cartMrkt} />
+                            <Card.Body>
+                                     <Card.Title>Product</Card.Title>
+                                    <Card.Text>
+                                        Product Description
+                                    </Card.Text>
+                                    <Card.Text>
+                                        $Price
+                                    </Card.Text>
+                                    <Button variant="primary" className="mainPageBuyProductButton">Buy</Button>
+                            </Card.Body>
+                        </Card>
+                        <Card style={{ width: '10rem' }} className="mainPageCardProduct">
+                            <Card.Img variant="top" src={cartMrkt} />
+                            <Card.Body>
+                                     <Card.Title>Product</Card.Title>
+                                    <Card.Text>
+                                        Product Description
+                                    </Card.Text>
+                                    <Card.Text>
+                                        $Price
+                                    </Card.Text>
+                                    <Button variant="primary" className="mainPageBuyProductButton">Buy</Button>
+                            </Card.Body>
+                        </Card>
+                        <Card style={{ width: '10rem' }} className="mainPageCardProduct">
+                            <Card.Img variant="top" src={cartMrkt} />
+                            <Card.Body>
+                                     <Card.Title>Product</Card.Title>
+                                    <Card.Text>
+                                        Product Description
+                                    </Card.Text>
+                                    <Card.Text>
+                                        $Price
+                                    </Card.Text>
+                                    <Button variant="primary" className="mainPageBuyProductButton">Buy</Button>
+                            </Card.Body>
+                        </Card>
+                        <Card style={{ width: '10rem' }} className="mainPageCardProduct">
+                            <Card.Img variant="top" src={cartMrkt} />
+                            <Card.Body>
+                                     <Card.Title>Product</Card.Title>
+                                    <Card.Text>
+                                        Product Description
+                                    </Card.Text>
+                                    <Card.Text>
+                                        $Price
+                                    </Card.Text>
+                                    <Button variant="primary" className="mainPageBuyProductButton">Buy</Button>
+                            </Card.Body>
+                        </Card>
+                        <Card style={{ width: '10rem' }} className="mainPageCardProduct">
+                            <Card.Img variant="top" src={cartMrkt} />
+                            <Card.Body>
+                                     <Card.Title>Product</Card.Title>
+                                    <Card.Text>
+                                        Product Description
+                                    </Card.Text>
+                                    <Card.Text>
+                                        $Price
+                                    </Card.Text>
+                                    <Button variant="primary" className="mainPageBuyProductButton">Buy</Button>
+                            </Card.Body>
+                        </Card>
+                        <Card style={{ width: '10rem' }} className="mainPageCardProduct">
+                            <Card.Img variant="top" src={cartMrkt} />
+                            <Card.Body>
+                                     <Card.Title>Product</Card.Title>
+                                    <Card.Text>
+                                        Product Description
+                                    </Card.Text>
+                                    <Card.Text>
+                                        $Price
+                                    </Card.Text>
+                                    <Button variant="primary" className="mainPageBuyProductButton">Buy</Button>
+                            </Card.Body>
+                        </Card>
+                        <Card style={{ width: '10rem' }} className="mainPageCardProduct">
+                            <Card.Img variant="top" src={cartMrkt} />
+                            <Card.Body>
+                                     <Card.Title>Product</Card.Title>
+                                    <Card.Text>
+                                        Product Description
+                                    </Card.Text>
+                                    <Card.Text>
+                                        $Price
+                                    </Card.Text>
+                                    <Button variant="primary" className="mainPageBuyProductButton">Buy</Button>
+                            </Card.Body>
+                        </Card>
+                        <Card style={{ width: '10rem' }} className="mainPageCardProduct">
+                            <Card.Img variant="top" src={cartMrkt} />
+                            <Card.Body>
+                                     <Card.Title>Product</Card.Title>
+                                    <Card.Text>
+                                        Product Description
+                                    </Card.Text>
+                                    <Card.Text>
+                                        $Price
+                                    </Card.Text>
+                                    <Button variant="primary" className="mainPageBuyProductButton">Buy</Button>
+                            </Card.Body>
+                        </Card>
+                        <Card style={{ width: '10rem' }} className="mainPageCardProduct">
+                            <Card.Img variant="top" src={cartMrkt} />
+                            <Card.Body>
+                                     <Card.Title>Product</Card.Title>
+                                    <Card.Text>
+                                        Product Description
+                                    </Card.Text>
+                                    <Card.Text>
+                                        $Price
+                                    </Card.Text>
+                                    <Button variant="primary" className="mainPageBuyProductButton">Buy</Button>
+                            </Card.Body>
+                        </Card>
+                        <Card style={{ width: '10rem' }} className="mainPageCardProduct">
+                            <Card.Img variant="top" src={cartMrkt} />
+                            <Card.Body>
+                                     <Card.Title>Product</Card.Title>
+                                    <Card.Text>
+                                        Product Description
+                                    </Card.Text>
+                                    <Card.Text>
+                                        $Price
+                                    </Card.Text>
+                                    <Button variant="primary" className="mainPageBuyProductButton">Buy</Button>
+                            </Card.Body>
+                        </Card>
                     </Col>
-                    <Col sm="6" className="mainPageMainProductsShow">
-                        <div><h1>aaa</h1></div>
-                        <div><h1>aaa</h1></div>
-                        <div><h1>aaa</h1></div>
-                        <div><h1>aaa</h1></div>
-                        <div><h1>aaa</h1></div>
-                        <div><h1>aaa</h1></div>
+                    <Col className="mainPageSideProducts">
+                        <h3>More?</h3>
+                        <Card style={{ width: '10rem' }} className="mainPageSideCardProduct">
+                            <Card.Img variant="top" src={cartMrkt} />
+                            <Card.Body>
+                                     <Card.Title>Product</Card.Title>
+                                    <Card.Text>
+                                        Product Description
+                                    </Card.Text>
+                                    <Card.Text>
+                                        $Price
+                                    </Card.Text>
+                                    <Button variant="primary" className="mainPageBuyProductButton">Buy</Button>
+                            </Card.Body>
+                        </Card>
                     </Col>
                 </Col>
                 
