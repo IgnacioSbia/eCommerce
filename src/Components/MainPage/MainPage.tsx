@@ -4,14 +4,31 @@ import './MainPage.css';
 import cartMrkt from '../NavBar/NavImgs/carr.png';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { useEffect, useState } from "react";
 
 function MainPage() {
+    const [products, setProducts] = useState<any>([])
+
+    useEffect(()=>{
+        var requestOptions:Object = {
+            method: 'GET',
+            redirect: 'follow'
+          };
+          
+          fetch("http://localhost:8000/api/getProducts", requestOptions)
+            .then(response => response.json())
+            .then(result =>{ if(result){setProducts(result.products)}else{console.log("Error")}})
+            .catch(error => console.log('error', error));
+    }, [0])
+
+    console.log(products[0]);
+
   return (
     <>
     <header>
         <NavBar/>
     </header>
-    <body className="">
+    <main className="">
        <Row>
            <Col xs sm="10">
                 <Col sm="8" className="mainPageProducts">
@@ -265,7 +282,7 @@ function MainPage() {
            </Col>
            
        </Row>
-    </body>
+    </main>
     </>
     )
 }

@@ -40,3 +40,6 @@
 .mainPageSideProducts{
     background: rgba(0, 0, 0, 0.034);
 }
+div.row{
+    --bs-gutter-x: 0;
+}
