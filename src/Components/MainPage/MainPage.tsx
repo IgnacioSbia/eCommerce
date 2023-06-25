@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 
 function MainPage() {
     const [products, setProducts] = useState<any>([])
+    
 
     useEffect(()=>{
         var requestOptions:Object = {
@@ -44,11 +45,11 @@ function MainPage() {
                             <Card.Img variant="top" src={cartMrkt} />
                             <Card.Body>
                                     <Card.Title>{product.product_name}</Card.Title>
-                                    <Card.Text>
+                                    <Card.Text className="mainPageProductCardDescription">
                                         {product.product_description}
                                     </Card.Text>
                                     <Card.Text>
-                                        ${product.product_price}
+                                        $ {product.product_price}
                                     </Card.Text>
                                     <Button variant="primary" className="mainPageBuyProductButton">Buy</Button>
                              </Card.Body>

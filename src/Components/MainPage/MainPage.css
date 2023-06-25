@@ -43,3 +43,6 @@
 div.row{
     --bs-gutter-x: 0;
 }
+.mainPageProductCardDescription{
+    max-height: 50%;
+}
