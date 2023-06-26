@@ -1,4 +1,14 @@
 .prodctPageDetails{
     display: flex;
     justify-content: center;
+    align-self: center;
+}
+.productPageDetailsToBuy{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding: 2%;
+    position: relative;
+    top: 50%;
+    
 }

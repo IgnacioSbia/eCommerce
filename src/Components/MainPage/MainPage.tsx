@@ -5,18 +5,18 @@ import cartMrkt from '../NavBar/NavImgs/carr.png';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 
 function MainPage() {
     const [products, setProducts] = useState<any>([])
-    
-
+    const navigate = useNavigate();
     useEffect(()=>{
         var requestOptions:Object = {
             method: 'GET',
             redirect: 'follow'
           };
           
-          fetch("http://localhost:8000/api/getProducts", requestOptions)
+          fetch("http://localhost:8000/api/Products", requestOptions)
             .then(response => response.json())
             .then(result =>{ if(result){setProducts(result.products)}else{console.log("Error")}})
             .catch(error => console.log('error', error));
@@ -24,6 +24,10 @@ function MainPage() {
 
     console.log(products[0]);
 
+    const selectedProduct = (e:any)=>{
+        localStorage.setItem('prodId', e )
+        navigate('/Product')
+    }
   return (
     <>
     <header>
@@ -41,7 +45,7 @@ function MainPage() {
                         {/*Main Products Section*/}
                        {products.map((product:any)=>{
                         return(
-                        <Card style={{ width: '10rem' }} className="mainPageCardProduct">
+                        <Card style={{ width: '10rem' }} className="mainPageCardProduct" onClick={()=>selectedProduct(product.id)} >
                             <Card.Img variant="top" src={cartMrkt} />
                             <Card.Body>
                                     <Card.Title>{product.product_name}</Card.Title>

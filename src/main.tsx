@@ -8,7 +8,7 @@ import Product from './Components/Product/Product.tsx';
 
 const Router  = createBrowserRouter([
   {path: "/", element: <MainPage/>},
-  {path: "/Product", element: <Product/>}
+  {path: "/Product",  element: <Product/>}
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

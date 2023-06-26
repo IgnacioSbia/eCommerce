@@ -1,15 +1,39 @@
 import { Col, Row } from "react-bootstrap"
 import Carousel from 'react-bootstrap/Carousel';
 import './Product.css';
+import { useEffect, useState } from "react";
 
 
 function Product() {
+
+    const prodId = localStorage.getItem('prodId')
+    const [selectedProduct, setSelectedProduct] = useState<any>([]);
+    
+    useEffect( ()=>{
+
+        
+        const getProduct = async()=>{
+            var requestOptions:Object = {
+                method: 'GET',
+                redirect: 'follow'
+              };
+              
+             await fetch("http://localhost:8000/api/Product?proId=5", requestOptions)
+                .then(response => response.json())
+                .then(result => { if(result){setSelectedProduct(result)}else{console.log("Error")}})
+                .catch(error => console.log('error', error));
+        }
+        getProduct();
+    }, [0]);
+    console.log(prodId)
+    console.log(selectedProduct)
+    
   return (
     <main>
-        <Row>
+        ( <Row>
             <Col sm="9" className="prodctPageDetails">
                 <section className="productPageMainTitle">
-                    <h1>Product</h1>
+                    <h1>a</h1>
                 <Carousel slide={false}>
                     <Carousel.Item>
                         <img
@@ -17,10 +41,6 @@ function Product() {
                         src="holder.js/800x400?text=First slide&bg=373940"
                         alt="First slide"
                         />
-                        <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                        </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
@@ -29,10 +49,6 @@ function Product() {
                         alt="Second slide"
                         />
 
-                        <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
@@ -40,25 +56,20 @@ function Product() {
                         src="holder.js/800x400?text=Third slide&bg=20232a"
                         alt="Third slide"
                         />
-
-                        <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                        </p>
-                        </Carousel.Caption>
                     </Carousel.Item>
                     </Carousel>
                 </section>
             </Col>
-            <Col sm="3">
+            <Col sm="3" className="productPageDetailsToBuy">
                 <aside>
                  <h3>Details</h3>
-                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis, qui cumque. Ipsam adipisci ab porro ullam. Soluta illum commodi quis?</p>
+                 <p>a</p>
                 </aside>
                 <button>Buy</button>
             </Col>
-        </Row>
+        </Row>) 
+    
+  
     </main>
   )
 }
