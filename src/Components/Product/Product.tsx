@@ -2,13 +2,15 @@ import { Col, Row } from "react-bootstrap"
 import Carousel from 'react-bootstrap/Carousel';
 import './Product.css';
 import { useEffect, useState } from "react";
+import cardPlaceHolder from '../NavBar/NavImgs/carr.png';
+import { useNavigate } from "react-router";
 
 
 function Product() {
 
     const prodId = localStorage.getItem('prodId')
     const [selectedProduct, setSelectedProduct] = useState<any>([]);
-    
+    const navigate = useNavigate();
     useEffect( ()=>{
 
         
@@ -18,34 +20,38 @@ function Product() {
                 redirect: 'follow'
               };
               
-             await fetch("http://localhost:8000/api/Product?proId=5", requestOptions)
+             await fetch(`http://localhost:8000/api/Product?proId=${prodId}`, requestOptions)
                 .then(response => response.json())
-                .then(result => { if(result){setSelectedProduct(result)}else{console.log("Error")}})
+                .then(result => { if(result){setSelectedProduct(result.product)}else{console.log("Error")}})
                 .catch(error => console.log('error', error));
         }
         getProduct();
     }, [0]);
     console.log(prodId)
     console.log(selectedProduct)
-    
+    const handleBack = ()=>{
+        localStorage.clear();
+        setSelectedProduct([''])
+        navigate('/')
+    }
   return (
     <main>
-        ( <Row>
+         <Row>
             <Col sm="9" className="prodctPageDetails">
                 <section className="productPageMainTitle">
-                    <h1>a</h1>
+                <button onClick={handleBack}>goback</button>{selectedProduct.map((prod:any)=>(<h1>{prod.product_name}</h1>))}
                 <Carousel slide={false}>
                     <Carousel.Item>
                         <img
                         className="d-block w-100"
-                        src="holder.js/800x400?text=First slide&bg=373940"
+                        src={cardPlaceHolder}
                         alt="First slide"
                         />
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
                         className="d-block w-100"
-                        src="holder.js/800x400?text=Second slide&bg=282c34"
+                        src={cardPlaceHolder}
                         alt="Second slide"
                         />
 
@@ -53,7 +59,7 @@ function Product() {
                     <Carousel.Item>
                         <img
                         className="d-block w-100"
-                        src="holder.js/800x400?text=Third slide&bg=20232a"
+                        src={cardPlaceHolder}
                         alt="Third slide"
                         />
                     </Carousel.Item>
@@ -63,11 +69,11 @@ function Product() {
             <Col sm="3" className="productPageDetailsToBuy">
                 <aside>
                  <h3>Details</h3>
-                 <p>a</p>
+                 {selectedProduct.map((prod:any)=>(<p>{prod.product_description}</p>))}
                 </aside>
-                <button>Buy</button>
+                <button className="productPageBuyButton">Buy</button>
             </Col>
-        </Row>) 
+        </Row>
     
   
     </main>

@@ -12,3 +12,16 @@
     top: 50%;
     
 }
+.productPageBuyButton{
+    border: none;
+    justify-content: center;
+    width: 50%;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+.productPageBuyButton:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
