@@ -4,7 +4,8 @@ import './Product.css';
 import { useEffect, useState } from "react";
 import cardPlaceHolder from '../NavBar/NavImgs/carr.png';
 import { useNavigate } from "react-router";
-
+import leftArrow from '../../assets/Imgs/leftArrow.svg';
+import NavBar from "../NavBar/NavBar";
 
 function Product() {
 
@@ -35,12 +36,16 @@ function Product() {
         navigate('/')
     }
   return (
+    
     <main>
+        <NavBar/>
          <Row>
             <Col sm="9" className="prodctPageDetails">
                 <section className="productPageMainTitle">
-                <button onClick={handleBack}>goback</button>{selectedProduct.map((prod:any)=>(<h1>{prod.product_name}</h1>))}
-                <Carousel slide={false}>
+                    <aside className="productPageTitleBack">
+                     <button onClick={handleBack} className="productPageGoBackButton"><img src={leftArrow}/></button>{selectedProduct.map((prod:any)=>(<h1>{prod.product_name}</h1>))}
+                    </aside>
+                  <Carousel slide={false}>
                     <Carousel.Item>
                         <img
                         className="d-block w-100"
