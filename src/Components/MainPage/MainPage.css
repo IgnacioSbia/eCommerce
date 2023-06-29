@@ -19,7 +19,6 @@
 .mainPageCardProduct{
     margin: 5%;
     border: none;
-    
 }
 .mainPageCardProduct:hover{
     border: 1px solid black;
@@ -45,4 +44,15 @@ div.row{
 }
 .mainPageProductCardDescription{
     max-height: 50%;
+}
+.mainPageCardProductCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.mainPageProductDescription{
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

@@ -30,14 +30,32 @@
     background:none;
     border: none;
     margin-right: 5%;
+    display: flex;
+    justify-content: start;
+    padding: 2%;
 }
 .productPageTitleBack{
     display: flex;
     padding: 2%;
 }
 .productPageMainTitle{
+    color: rgb(0, 0, 0);
+    background-color: rgb(131, 130, 130);
     padding-top: 1%;
     margin-top: 5%;
-    background-color:  hsl(0, 0%, 86%);
     border-radius: 15px;
+}
+.productPageMainTitle:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 1px solid white
+    
+}
+.productPageImage{
+    width: 150px;
+    height: 380px;
+}
+.productPageCarouselImages{
+    padding: 15%;
+    width: 460px;
 }

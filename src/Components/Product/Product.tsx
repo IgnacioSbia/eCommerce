@@ -2,10 +2,11 @@ import { Col, Row } from "react-bootstrap"
 import Carousel from 'react-bootstrap/Carousel';
 import './Product.css';
 import { useEffect, useState } from "react";
-import cardPlaceHolder from '../NavBar/NavImgs/carr.png';
 import { useNavigate } from "react-router";
 import leftArrow from '../../assets/Imgs/leftArrow.svg';
 import NavBar from "../NavBar/NavBar";
+import productHolder2 from '../../assets/Imgs/productholder3.png';
+
 
 function Product() {
 
@@ -40,31 +41,32 @@ function Product() {
     <main>
         <NavBar/>
          <Row>
+         <button onClick={handleBack} className="productPageGoBackButton"><img src={leftArrow}/></button>
             <Col sm="9" className="prodctPageDetails">
                 <section className="productPageMainTitle">
                     <aside className="productPageTitleBack">
-                     <button onClick={handleBack} className="productPageGoBackButton"><img src={leftArrow}/></button>{selectedProduct.map((prod:any)=>(<h1>{prod.product_name}</h1>))}
+                     {selectedProduct.map((prod:any)=>(<h1 className="productPageProductTitle">{prod.product_name}</h1>))}
                     </aside>
-                  <Carousel slide={false}>
+                  <Carousel slide={false} className="productPageCarouselImages"> 
                     <Carousel.Item>
                         <img
-                        className="d-block w-100"
-                        src={cardPlaceHolder}
+                        className="d-block w-100 productPageImage"
+                        src={productHolder2}
                         alt="First slide"
                         />
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-                        className="d-block w-100"
-                        src={cardPlaceHolder}
+                        className="d-block w-100 productPageImage"
+                        src={productHolder2}
                         alt="Second slide"
                         />
 
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-                        className="d-block w-100"
-                        src={cardPlaceHolder}
+                        className="d-block w-100 productPageImage"
+                        src={productHolder2}
                         alt="Third slide"
                         />
                     </Carousel.Item>

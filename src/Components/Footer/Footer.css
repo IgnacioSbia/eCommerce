@@ -1,0 +1,9 @@
+.footerSection{
+    color: black;
+    border: 1px solid white
+}
+.footerSection:hover{
+    color: white;
+    border: 1px solid black;
+    background-color: black;
+}
