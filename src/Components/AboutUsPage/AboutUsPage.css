@@ -1,0 +1,28 @@
+.aboutUsPresentation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutUsTitle{
+    font-size: 36px;
+}
+.aboutUsTheImg{
+    border-radius: 8px;
+    border: 1px solid black;
+    width: 70%;
+}
+.aboutUsTheImg:hover{
+    border-radius: 10px;
+    border: 2px solid white;
+    width: 70%;
+}
+.aboutUsPresentationInformation{
+    padding: 1%;
+}
+.aboutUsPresentationDescription{
+    font-size: 18px;
+
+}
+.aboutUsFooter{
+    margin: 5%;
+}

@@ -2,3 +2,12 @@
     width: 44px;
     height: 44px;
 }
+.navBarToAbotUs:any-link{
+    color: rgb(148, 148, 148);
+    text-decoration: none;
+}
+.navBarToAbotUs:any-link:hover{
+    transition: color .15s ease-in-out;
+    color: rgb(212, 212, 212);
+    text-decoration: none;
+}

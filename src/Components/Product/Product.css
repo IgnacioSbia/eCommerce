@@ -3,6 +3,13 @@
     justify-content: center;
     align-self: center
 }
+.productMainSection{
+    background-image: url('../../assets/Imgs/productBox.svg');
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: 5% 1%;
+    background-color: black;
+}
 .productPageDetailsToBuy{
     display: flex;
     flex-direction: column;
@@ -10,9 +17,11 @@
     padding: 2%;
     position: relative;
     top: 50%;
-    
-    
+    background-color: white;
+    border-radius: 8px;
+    padding: 1%;
 }
+
 .productPageBuyButton{
     border: none;
     justify-content: center;
@@ -39,8 +48,8 @@
     padding: 2%;
 }
 .productPageMainTitle{
-    color: rgb(0, 0, 0);
-    background-color: rgb(131, 130, 130);
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.781);
     padding-top: 1%;
     margin-top: 5%;
     border-radius: 15px;
@@ -58,4 +67,7 @@
 .productPageCarouselImages{
     padding: 15%;
     width: 460px;
+}
+.productPageFooter{
+    margin-top: 4%;
 }
