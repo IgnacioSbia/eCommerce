@@ -7,6 +7,7 @@ import leftArrow from '../../assets/Imgs/leftArrow.svg';
 import NavBar from "../NavBar/NavBar";
 import productHolder2 from '../../assets/Imgs/productBox.svg';
 import Footer from "../Footer/Footer";
+import { Link } from "react-router-dom";
 
 
 function Product() {
@@ -81,7 +82,7 @@ function Product() {
                     <h3>Details</h3>
                     {selectedProduct.map((prod:any)=>(<p>{prod.product_description}</p>))}
                     </aside>
-                    <button className="productPageBuyButton">Buy</button>
+                    <Link to={'/CheckOut'}><button className="productPageBuyButton">Buy</button></Link>
                 </Col>
             </Row>
         </main>

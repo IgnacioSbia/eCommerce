@@ -9,6 +9,7 @@
     background-size: 40%;
     background-position: 5% 1%;
     background-color: black;
+    padding-bottom: 1%;
 }
 .productPageDetailsToBuy{
     display: flex;
