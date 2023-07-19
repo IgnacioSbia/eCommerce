@@ -37,3 +37,56 @@
     color: black;
     border: 1px solid black;
 }
+
+/*Form Information*/
+.checkOutPageFormInformation{
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    justify-content: center;
+    height: 25vh;
+    margin-bottom: 5%;
+}
+.checkOutPageEveryInformation{
+    display: flex;
+   
+}
+.checkOutPageFormInformationSection{
+    display: flex;
+    justify-content: center;
+}
+.checkOutPageInformationParagraph{
+    padding-right: 5%;
+}
+.checkOutPageInformationInput{
+    width: 150PX;
+    height: 25px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.253);
+    padding: 2%;
+}
+#checkOutPageNameInfo{
+    width: 120%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1%;
+    padding-bottom: 2%;
+    margin-bottom: 10%;
+}
+#checkOutPageGeoInfo{
+    width: 120%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1%;
+    margin-bottom: 10%;
+}
+#checkOutPageNumberInfo{
+    width: 120%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1%;
+    margin-bottom: 10%;
+}

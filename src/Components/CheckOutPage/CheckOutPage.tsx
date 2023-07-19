@@ -40,7 +40,38 @@ function CheckOutPage() {
         </>
         
        :
-       <h1>hi</h1>
+       <></>
+        }{currentStage == 'Delivery Information' ?
+          <>
+            <aside>
+              <h1>{currentStage}</h1>
+            </aside>
+            <section className="checkOutPageFormInformationSection">
+              <form className="checkOutPageFormInformation">
+                <div className="checkOutPageEveryInformation" id="checkOutPageNameInfo">
+                  <label className="checkOutPageInformationParagraph">First Name</label>
+                  <input className="checkOutPageInformationInput" placeholder="Laura"/>
+                  <label className="checkOutPageInformationParagraph">Last Name</label>
+                  <input className="checkOutPageInformationInput" placeholder="Joldins"/>
+                </div>
+                <div className="checkOutPageEveryInformation" id="checkOutPageGeoInfo">
+                  <label className="checkOutPageInformationParagraph">Adress</label>
+                  <input className="checkOutPageInformationInput" placeholder="adress. 123"/>
+                  <label className="checkOutPageInformationParagraph">Postal Code</label>
+                  <input className="checkOutPageInformationInput" placeholder="ZIP"/>
+                </div>
+                <div className="checkOutPageEveryInformation" id="checkOutPageNumberInfo">
+                  <label className="checkOutPageInformationParagraph">City</label>
+                  <input className="checkOutPageInformationInput"/>
+                  <label className="checkOutPageInformationParagraph">Phone Number</label>
+                  <input className="checkOutPageInformationInput" placeholder="123456789"/>
+                </div>
+                
+              </form>
+            </section>
+          </>
+          :
+          <></>
         }
        
         <button className="checkOutPageNextButton" onClick={()=>handleClickStage(currentStage)}>NEXT</button>
