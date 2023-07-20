@@ -1,25 +1,28 @@
-import{ useState } from 'react'
+import{ useEffect, useState } from 'react'
+import { useNavigate } from 'react-router';
+import './PostPaymentPage.css';
 
 function PostPaymentPage() {
     const [time, setTime] = useState(10);
+    const navigate = useNavigate()
 
-    const redirectToMain = ()=>{
-        if(time){
-            for(let i = 0; i <= time; i++ ){
-                setTime(time-1);
-            }
-           
-        }else if(time === 0){
-            alert('yes')
-        }
+useEffect(()=>{
+    time > 0 && setTimeout(()=> setTime(time - 1), 1000);
+    if(time == 0){
+        navigate("/")
+
     }
-    redirectToMain()
+  }, [time]);
+
 
   return (
     <>
-        <main>
-            <h1>Thank you very much!</h1>
-            <h1>You will be redirected to the main Page in{time}</h1>
+        <main className='postPaymentPageMain'>
+            <aside className='postPaymentSectionContent'>
+                <h1>Thank you very much!</h1>
+                <h1>You will be redirected to the home Page</h1>
+                <h1>{time}</h1>
+            </aside>    
         </main>
     </>
   )
